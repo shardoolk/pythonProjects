@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <h1>Weather Forecast</h1>
+    
+    <h2>Temperature Forecast</h2>
+    <img src="data:image/png;base64,{{ temperature_plot }}" alt="Temperature Forecast">
+
+    <h2>Real Feel Temperature Forecast</h2>
+    <img src="data:image/png;base64,{{ feels_like_plot }}" alt="Real Temperature Forecast">
+    
+    <h2>Humidity Forecast</h2>
+    <img src="data:image/png;base64,{{ humidity_plot }}" alt="Humidity Forecast">
+    
+    <h2>Temperature Forecast Boxplot</h2>
+    <img src="data:image/png;base64,{{ boxplot_data }}" alt="Temperature Forecast Boxplot">
+    
+    <h2>Rainy Days</h2>
+    <ul>
+        {% for day in rainy_days %}
+            <li>{{ day }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast  for city </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        
+        <h2>Temperature Forecast</h2>
+        <img src="data:image/png;base64,{{ temperature_plot }}" alt="Temperature Forecast">
+
+        <h2>Real Feel Temperature Forecast</h2>
+        <img src="data:image/png;base64,{{ feels_like_plot }}" alt="Real Temperature Forecast">
+            
+        <h2>Humidity Forecast</h2>
+        <img src="data:image/png;base64,{{ humidity_plot }}" alt="Humidity Forecast">
+        
+        <h2>Temperature Forecast Boxplot</h2>
+        <img src="data:image/png;base64,{{ boxplot_data }}" alt="Temperature Forecast Boxplot">
+        
+        <h2>Rainy Days</h2>
+        <ul>
+            {% for day in rainy_days %}
+                <li>{{ day }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
